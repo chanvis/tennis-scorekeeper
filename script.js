@@ -142,7 +142,16 @@ function endMatch(winningPlayer) {
     let summary = `Match Over!\nWinner: ${winner}\n\nSet Score: ${finalSetScore}\n${player1Name} Total Points: ${totalPoints[0]}\n${player2Name} Total Points: ${totalPoints[1]}`;
 
     alert(summary);
-    resetMatch();
+}
+
+function getGameSummary() {
+    let player1Name = document.getElementById("player1-name").value || "Player 1";
+    let player2Name = document.getElementById("player2-name").value || "Player 2";
+    let setScore = `${setScores[0]} - ${setScores[1]}`;
+    
+    let summary = `Set Score: ${setScore}\n${player1Name}: ${totalPoints[0]} Total Points\n${player2Name}: ${totalPoints[1]} Total Points`;
+    
+    alert(summary);
 }
 
 function updateUI() {
