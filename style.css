@@ -70,3 +70,7 @@ ul {
     background: #1e7e34;
 }
 
+.note {
+    font-size: 14px;
+    color: gray;
+}
