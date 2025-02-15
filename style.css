@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 50%;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.player {
+    text-align: center;
+}
+
+.set-score {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.game-score {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+button {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    background: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.undo {
+    background: #dc3545;
+}
+
+.undo:hover {
+    background: #a71d2a;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+.reset {
+    background: #28a745;
+}
+
+.reset:hover {
+    background: #1e7e34;
+}
+
