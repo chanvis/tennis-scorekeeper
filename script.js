@@ -98,8 +98,8 @@ function resetMatch() {
     
     document.getElementById("player1-name").value = "";
     document.getElementById("player2-name").value = "";
-		document.getElementById("name1").textContent = "Player 1";
-		document.getElementById("name2").textContent = "Player 2";
+		document.getElementById("name1").textContent = "P1";
+		document.getElementById("name2").textContent = "P2";
     updateUI();
 }
 
