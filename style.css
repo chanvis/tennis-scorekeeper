@@ -80,17 +80,20 @@ ul {
 }
 
 /* Responsive Design for Mobile */
+/* Responsive Design for Mobile */
 @media (max-width: 600px) {
     .container {
         width: 95%;
         padding: 15px;
     }
     .scoreboard {
-        flex-direction: column;
-        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
     }
     .player {
-        width: 100%;
-        margin-bottom: 15px;
+        flex: 1;
+        text-align: center;
     }
 }
+
