@@ -122,6 +122,19 @@ button:hover {
     background: #218838;
 }
 
+.player-name {
+    padding: 5px 5px;
+    background-color: #28a745;
+    color: white;
+    font-weight: bold;
+    border-radius: 3px;
+    cursor: pointer;
+    text-align: center;
+    min-width: 80px;
+    font-size: 12px;
+    transition: background 0.3s, transform 0.1s;
+}
+
 /* Responsive Design for Mobile */
 /* Responsive Design for Mobile */
 @media (max-width: 600px) {
