@@ -133,6 +133,7 @@ button:hover {
     min-width: 80px;
     font-size: 12px;
     transition: background 0.3s, transform 0.1s;
+    text-decoration: underline;
 }
 
 /* Responsive Design for Mobile */
