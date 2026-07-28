@@ -193,10 +193,10 @@ function updateServerIndicator() {
     const player2Name = document.getElementById("player2-name").value.trim() || "Player 2";
 
     document.getElementById("name1").textContent =
-        (currentServer === 1 ? "▶ " : "") + player1Name;
+        (currentServer === 1 ? "🎾" : "") + player1Name;
 
     document.getElementById("name2").textContent =
-        (currentServer === 2 ? "▶ " : "") + player2Name;
+        (currentServer === 2 ? "🎾" : "") + player2Name;
 }
 
 function switchServer() {
