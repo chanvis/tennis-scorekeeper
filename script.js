@@ -189,8 +189,8 @@ function updatePlayerNames() {
 }
 
 function updateServerIndicator() {
-    const player1Name = document.getElementById("player1-name").value.trim() || "Player 1";
-    const player2Name = document.getElementById("player2-name").value.trim() || "Player 2";
+    const player1Name = document.getElementById("player1-name").value.trim() || "P1";
+    const player2Name = document.getElementById("player2-name").value.trim() || "P2";
 
     document.getElementById("name1").textContent =
         (currentServer === 1 ? "🎾" : "") + player1Name;
