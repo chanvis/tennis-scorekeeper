@@ -7,6 +7,7 @@ let scoreHistory = [];
 let deuceHistory = [0, 0];  // Tracks deuce points
 let isTiebreak = false;
 let tiebreakPoints = [0, 0];
+let currentServer = 1; // Player 1 serves first
 
 function addPoint(player) {
     let otherPlayer = player === 1 ? 2 : 1;
@@ -77,7 +78,8 @@ function winGame(player) {
     }
 
     resetGame();
-    updateUI();
+	switchServer();
+	updateUI();
 }
 
 
@@ -98,9 +100,11 @@ function resetMatch() {
     
     document.getElementById("player1-name").value = "";
     document.getElementById("player2-name").value = "";
-		document.getElementById("name1").textContent = "P1";
-		document.getElementById("name2").textContent = "P2";
-    updateUI();
+	document.getElementById("name1").textContent = "P1";
+	document.getElementById("name2").textContent = "P2";
+    currentServer = 1;
+	updateServerIndicator();
+	updateUI();
 }
 
 function logHistory() {
@@ -172,7 +176,7 @@ function updateUI() {
 function updatePlayerNames() {
     let player1Name = document.getElementById("player1-name").value.trim();
     let player2Name = document.getElementById("player2-name").value.trim();
-    
+
     if (player1Name === "" || player2Name === "") {
         alert("Please enter both player names before starting the game.");
         return;
@@ -180,4 +184,22 @@ function updatePlayerNames() {
 
     document.getElementById("name1").textContent = player1Name;
     document.getElementById("name2").textContent = player2Name;
+
+    updateServerIndicator();   // Only new line
+}
+
+function updateServerIndicator() {
+    const player1Name = document.getElementById("player1-name").value.trim() || "Player 1";
+    const player2Name = document.getElementById("player2-name").value.trim() || "Player 2";
+
+    document.getElementById("name1").textContent =
+        (currentServer === 1 ? "▶ " : "") + player1Name;
+
+    document.getElementById("name2").textContent =
+        (currentServer === 2 ? "▶ " : "") + player2Name;
+}
+
+function switchServer() {
+    currentServer = currentServer === 1 ? 2 : 1;
+    updateServerIndicator();
 }
