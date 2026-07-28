@@ -136,6 +136,13 @@ button:hover {
     text-decoration: underline;
 }
 
+.server-indicator {
+    display: inline-block;
+    width: 20px;
+    text-align: center;
+    margin-right: 4px;
+}
+
 /* Responsive Design for Mobile */
 /* Responsive Design for Mobile */
 @media (max-width: 600px) {
